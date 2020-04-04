@@ -8,3 +8,58 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* .currInfo {
+    
+    display: block;
+    float: left;
+} */
+
+.currentWeather {
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.appSpeed {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.appWeaDes {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.appTemp {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.appPressure {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.appHumidity {
+    display: flex;
+    justify-content: center;
+}
+
+.appCity {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.appCountry {
+    
+    display: flex;
+    justify-content: center;
+}
