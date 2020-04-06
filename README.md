@@ -190,3 +190,8 @@ api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 api.openweathermap.org/data/2.5/weather?q={city name},{state}&appid={your api key}
 
 api.openweathermap.org/data/2.5/weather?q={city name},{state},{country code}&appid={your api key}
+
+
+
+
+https://oscarviquez.github.io/WeatherApp/

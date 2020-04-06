@@ -8,18 +8,18 @@ $(document).ready(function () {
     //api address +city + country + apikey,
     let apiCity = "Atlanta";
     const todayKey = "539c4552c221865dbee29f3f0ff60742";
-    const todayURL = `http://api.openweathermap.org/data/2.5/weather?q=${apiCity}&units=imperial&APPID=${todayKey}`;
+    const todayURL = `https://api.openweathermap.org/data/2.5/weather?q=${apiCity}&units=imperial&APPID=${todayKey}`;
 
     const weekKey = "63a9ac4e19f45a761bdfaa751262d207";
-    const weekURL = `http://api.openweathermap.org/data/2.5/forecast?q=${apiCity}&units=imperial&appid=${weekKey}`
-
+    const weekURL = `https://api.openweathermap.org/data/2.5/forecast?q=${apiCity}&units=imperial&appid=${weekKey}`
+//====== AJAX REQUEST ====== //
     $.ajax(todayURL, {
         method: "GET",
         data: JSON,
         url: todayURL
     }).then(data => {
-        //====== CONSOLE LOG DATA ====== //
-        //the console log data
+
+        //====== Console log data ====== //
         console.log(data);
         // console.log('weather:',data.weather[0].main);
         // console.log('windspeed:',data.wind.speed);
@@ -62,11 +62,13 @@ $(document).ready(function () {
     });
 
     /////////// 5 DAY FORECAST ///////////
+    //====== AJAX REQUEST ====== //
     $.ajax(weekURL, {
         method: "GET",
         data: JSON,
         url: weekURL
     }).then(data => {
+
         //====== Miscs ====== //
         // List -> 5, 13, 21, 29, 37,
         //console.log(data);
