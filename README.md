@@ -144,19 +144,44 @@ parse. moment. js
 
 
 
+# 5 DAY Description:
 
-
-# Description:
-You can search 16 day weather forecast with daily average parameters by city name. All weather data can be obtained in JSON and XML formats.
+By city name
+Description:
+You can search weather forecast for 5 days with data every 3 hours by city name. All weather data can be obtained in JSON and XML formats.
 API call:
-api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={your api key}
+api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api key}
 
-api.openweathermap.org/data/2.5/forecast/daily?q={city name},{state}&cnt={cnt}&appid={your api key}
+api.openweathermap.org/data/2.5/forecast?q={city name},{state}&appid={your api key}
 
-api.openweathermap.org/data/2.5/forecast/daily?q={city name},{state},{country code}&cnt={cnt}&appid={your api key}
+api.openweathermap.org/data/2.5/forecast?q={city name},{state},{country code}&appid={your api key}
+
+Parameters:
+q city name, state and and country code divided by comma, use ISO 3166 country codes. You can specify the parameter not only in English. In this case, the API response should be returned in the same language as the language of requested location name if the location is in our predefined list of more than 200,000 locations.
+
+Examples of API calls:
+api.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml
+Please note, that searching by states available only for the USA locations.
+
+There is a possibility to receive a central district of the city/town with its own parameters (geographic coordinates/id/name) in API response. Example
+
+By city ID
+Description:
+You can search weather forecast for 5 days with data every 3 hours by city ID. API responds with exact result. All weather data can be obtained in JSON and XML formats.
+
+List of city ID city.list.json.gz can be downloaded here http://bulk.openweathermap.org/sample/
+
+We recommend to call API by city ID to get unambiguous result for your city.
+
+API call:
+api.openweathermap.org/data/2.5/forecast?id={city ID}&appid={your api key}
+Parameters:
+id city ID
+Examples of API calls:
+api.openweathermap.org/data/2.5/forecast?id=524901
 
 
-# Description:
+# TODAY Description:
 
 You can call by city name or city name, state and country code. API responds with a list of results that match a searching word.
 API call:
